@@ -1,0 +1,126 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Chillax", sans-serif;
+  color: #259d94;
+}
+html {
+  --BlueColor: #259d94;
+  --BeigeColor: #eed0b7;
+  --BackgroundColor: #f3decc;
+  --lightOverlayColor: #faeae2;
+  --backgroundGradient: linear-gradient(180deg, #eed0b7 0%, #f8e5dc 100%);
+  --darkTextColor: #333333;
+  --grayTextColor: #4d4d4d;
+  --whiteColor: #ffffff;
+  background-image: var(--backgroundGradient);
+  height: 100%;
+  width: 100%;
+}
+body {
+  height: 100%;
+  width: 100%;
+  display: flex;
+}
+body img {
+  /* Following 5 rows was taken from https://www.tutorialspoint.com/Preventing-an-image-from-being-draggable-or-selectable-in-HTML-without-using-JS on 2023-11-19 */
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+#backgroundImage {
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+#surferImage {
+  height: 50%;
+  position: absolute;
+  left: 55%;
+  top: 33%;
+  transform: translate(-50%, -50%);
+  transition: transform 0.1s ease;
+}
+main {
+  height: 60%;
+  width: 45%;
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-left: 8%;
+  margin-top: 8%;
+  z-index: 10;
+}
+main h1 {
+  font-weight: 500;
+  font-size: 5em;
+}
+main p {
+  font-size: 1.8em;
+  width: 70%;
+  margin-top: 5%;
+}
+#buttonContainer {
+  display: flex;
+  width: 75%;
+  justify-content: space-between;
+  margin-top: 8%;
+}
+#buttonContainer a {
+  text-decoration: none;
+  font-size: 1.8em;
+  font-weight: 500;
+  margin-top: 5%;
+  width: 310px;
+  height: 70px;
+  border-radius: 12px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+#boardButton {
+  background-color: var(--BlueColor);
+}
+#boardButton span {
+  color: var(--BackgroundColor);
+}
+#clothingButton {
+  box-shadow: 0px 0px 0px 3px var(--BlueColor) inset;
+  transition: all 0.15s ease;
+}
+#buttonContainer a span {
+  position: relative;
+  display: inline-block;
+}
+#boardButton span::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 3px;
+  bottom: 0;
+  left: 50%;
+  background: var(--BackgroundColor);
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+  transform: translateX(-50%);
+}
+#boardButton:hover span::before {
+  width: 100%;
+}
+#clothingButton span::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 3px;
+  bottom: 0;
+  left: 50%;
+  background: var(--BlueColor);
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+  transform: translateX(-50%);
+}
+#clothingButton:hover span::before {
+  width: 100%;
+}
