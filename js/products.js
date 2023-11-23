@@ -1,13 +1,17 @@
-/* */
+/**/
 let currentpage = 0;
 
 /*All pages for this product*/
 let allpages = document.getElementsByClassName("products_grid");
 
 /*changePage recieves the commands on what page to load
-and sends it to the pageLoader function*/
+and sends it to the pageLoader function
+
+The available commands are:
+"forward" - when user presses forward arrow
+"back" - when user presses backward arrow
+"(1,2,3...)" - when user presses specific page number*/
 function changePage(command) {
-    
   let f = "forward";
   let b = "back";
   /*If forward arrow is pressed*/
@@ -21,9 +25,8 @@ function changePage(command) {
       currentpage = currentpage;
     }
   } 
-  else if (command === b) {
-
   /*If backwards arrow is pressed*/
+  else if (command === b) {
     if (currentpage > 0) {
       currentpage = currentpage - 1;
       pageLoader();
@@ -31,11 +34,9 @@ function changePage(command) {
       currentpage = currentpage;
     }
   } 
+  /*If specific page is pressed*/
   else {
-
     animation();
-  /*If specific page is pressed the requested
-    page number is sent to pageLoader*/
     currentpage = command - 1;
     pageLoader();
   }
@@ -65,7 +66,6 @@ function pageLoader() {
   }
 }
 
-function animation(){
-    window.scrollTo({top: 0, behavior: 'smooth'});
-    
+function animation() {
+  window.scrollTo({ top: 0, behavior: "smooth" });
 }
