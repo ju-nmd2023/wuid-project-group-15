@@ -1,24 +1,97 @@
 :root {
-    --BlueColor: #259d94;
-    --BeigeColor: #eed0b7;
-    --BackgroundColor: #f3decc;
-    --lightOverlayColor: #faeae2;
-    --backgroundGradient: linear-gradient(180deg, #eed0b7 0%, #f8e5dc 100%);
-    --darkTextColor: #333333;
-    --grayTextColor: #4d4d4d;
-    --whiteColor: #ffffff;
+  --BlueColor: #259d94;
+  --BeigeColor: #eed0b7;
+  --BackgroundColor: #f3decc;
+  --lightOverlayColor: #faeae2;
+  --backgroundGradient: linear-gradient(180deg, #eed0b7 0%, #f8e5dc 100%);
+  --darkTextColor: #333333;
+  --grayTextColor: #4d4d4d;
+  --whiteColor: #ffffff;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    color: var(--darkTextColor);
-    font-family: 'Synonym', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: var(--darkTextColor);
+  font-family: "Synonym", sans-serif;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Chillax', sans-serif;
-    color: var(--BlueColor);
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Chillax", sans-serif;
+  color: var(--BlueColor);
 }
 
+.button,
+.button-border {
+  width: fit-content;
+  text-decoration: none;
+  border: none;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1.2rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  justify-content: center;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+  background-color: var(--BlueColor);
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.button {
+  color: white;
+  mix-blend-mode: darken;
+}
+
+main:has(.button) {
+  background-color: inherit;
+}
+
+.button-border {
+  color: var(--BlueColor);
+  background: transparent;
+  outline: 3px solid var(--BlueColor);
+  margin: 3px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: var(--whiteColor);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  height: 90px;
+}
+
+nav ul {
+  height: inherit;
+  position: relative;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+nav ul a {
+  text-decoration: none;
+  color: var(--BlueColor);
+  font-size: 1.2rem;
+  font-weight: 500;
+  transition: all 0.3s ease-in-out;
+}
+
+nav ul:first-child img {
+  height: 50px;
+}

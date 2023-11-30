@@ -3,7 +3,7 @@
   font-family: "Chillax", sans-serif;
 }
 html {
-  background-image: var(--backgroundGradient);
+  background-color: var(--BeigeColor);
   height: 100%;
   width: 100%;
 }
@@ -14,10 +14,11 @@ body {
   min-height: 100vh;
   width: 100%;
   display: flex;
-  background-image: var(--backgroundGradient);
+  background-color: var(--BeigeColor);
   background-attachment: fixed;
   position: relative;
 }
+
 body img {
   /* Following 5 rows was taken from https://www.tutorialspoint.com/Preventing-an-image-from-being-draggable-or-selectable-in-HTML-without-using-JS on 2023-11-19 */
   user-select: none;
