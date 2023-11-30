@@ -1,4 +1,5 @@
 body {
+  padding-top: 90px;
   background-color: var(--BackgroundColor);
 }
 
@@ -53,7 +54,7 @@ main {
   width: 420px;
   height: fit-content;
   position: sticky;
-  top: 50px;
+  top: 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
