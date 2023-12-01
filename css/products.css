@@ -30,13 +30,14 @@ p {
   font-family: "Chillax", sans-serif;
   font-weight: 500;
   font-size: 2rem;
-  margin-top: 0;
+  margin:2vh;
+  margin-left:0;
   color: var(--darkTextColor);
   text-align: left;
 }
 .products_grid {
   display: none;
-  grid-gap: 2vh;
+  grid-gap: 3vh;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(3, 1fr);
   border-left: solid var(--darkTextColor) 1px;
@@ -48,7 +49,6 @@ p {
   text-decoration: none;
   display: flex;
   flex-direction: column;
-  margin-bottom: 2vh;
   max-height: 100%;
   max-width: 100%;
   cursor: pointer;
@@ -92,7 +92,7 @@ p {
   opacity: 0;
   left:0;
   top:0;
-  transition: 0.2s ease;
+  
   width:100%;
   max-width: 100%;
 }
@@ -107,22 +107,6 @@ p {
   justify-content: center;
   justify-self: center;
   gap: 0.5rem;
-}
-#back,
-#forward,
-.pagebutton {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 3rem;
-  height: 3rem;
-  font-size: 0.9rem;
-  text-align: center;
-  background-color: var(--backgroundColor);
-  background-color: var(--backgroundColor);
-  border: 1px solid var(--darkTextColor);
-  border-radius: 8px;
-  cursor: pointer;
 }
 
 .button_select {
@@ -159,6 +143,7 @@ p {
   .mainimg {
     max-height: 200%;
     max-width: 200%;
+    width:auto;
     display: block;
     margin: auto;
   }
@@ -168,7 +153,6 @@ p {
   }
   .product_img_container {
     height: fit-content;
-    width: 100%;
     display: flex;
     justify-content: center;
     overflow: hidden;

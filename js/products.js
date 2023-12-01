@@ -50,9 +50,12 @@ function pageLoader() {
   let c = allpages[currentpage];
   c.style.display = "grid";
 
-  /*Change style of correct button*/
-  let numberedbuttons = document.getElementsByClassName("pagebutton");
-  numberedbuttons[currentpage].classList.add("button_select");
+  /*Change style of correct button, be aware that the forward and backwards arrow
+  is also included in this array but avoids getting the button_select class by
+  adding a "+1"*/
+  let numberedbuttons = document.getElementsByClassName("button-border");
+  
+  numberedbuttons[currentpage+1].classList.add("button_select");
 
   /*Toggle pages*/
 
@@ -62,7 +65,7 @@ function pageLoader() {
         match with the number of the current page is made invisible*/
     if (i != currentpage) {
       allpages[i].style.display = "none";
-      numberedbuttons[i].classList.remove("button_select");
+      numberedbuttons[i+1].classList.remove("button_select");
     }
   }
 }
