@@ -8,7 +8,7 @@ main {
 }
 
 body {
-  background-color: var(--BackgroundColor);
+  background-color: var(--backgroundColor);
   margin: 0;
 }
 
@@ -82,18 +82,16 @@ p {
 }
 .mainimg {
   position: relative;
-  left: 0;
-  top: 0;
-  max-height: 100%;
+  width:100%;
   max-width: 100%;
 }
 .hoverimg {
   position: absolute;
   opacity: 0;
-  left: 0;
-  top: 0;
+  left:0;
+  top:0;
   transition: 0.2s ease;
-  max-height: 100%;
+  width:100%;
   max-width: 100%;
 }
 #content {
@@ -118,7 +116,7 @@ p {
   height: 3rem;
   font-size: 0.9rem;
   text-align: center;
-  background-color: var(--BackgroundColor);
+  background-color: var(--backgroundColor);
   border: 1px solid var(--darkTextColor);
   border-radius: 8px;
   cursor: pointer;
@@ -126,8 +124,18 @@ p {
 
 .button_select {
   background-color: var(--BlueColor);
-  color: var(--BackgroundColor);
-  stroke: var(--BackgroundColor);
+  color: var(--backgroundColor);
+  stroke: var(--backgroundColor);
+}
+
+@media screen and (min-width: 2000px) {
+  .product_box h2 {
+    font-size: 1.3rem;
+  }
+  .product_box p {
+    font-size: 1.3rem;
+  }
+  
 }
 
 @media screen and (max-width: 1200px) {
@@ -136,7 +144,7 @@ p {
     grid-template-rows: repeat(4, 1fr);
   }
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 768px) {
   .products_grid {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(6, 1fr);

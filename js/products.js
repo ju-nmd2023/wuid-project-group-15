@@ -11,6 +11,7 @@ The available commands are:
 "forward" - when user presses forward arrow
 "back" - when user presses backward arrow
 "(1,2,3...)" - when user presses specific page number*/
+
 function changePage(command) {
   let f = "forward";
   let b = "back";
