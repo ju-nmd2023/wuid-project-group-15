@@ -2,26 +2,22 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="../css/main.css" />
-    <link rel="stylesheet" type="text/css" href="../css/thanks.css" />
+    <meta name="viewport"content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet"type="text/css"href="../css/main.css"/>
+    <link rel="stylesheet"type="text/css"href="../css/thanks.css"/>
+
+    <script src="../js/thanks.js" defer></script>
+    <script src="../js/main.js" defer></script>
+
     <title>Purchase Completed</title>
     <!--Fonts-->
-    <link
-      href="https://api.fontshare.com/v2/css?f[]=chillax@1&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://api.fontshare.com/v2/css?f[]=synonym@1&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://api.fontshare.com/v2/css?f[]=chillax@1&display=swap"rel="stylesheet"/>
+    <link href="https://api.fontshare.com/v2/css?f[]=synonym@1&display=swap"rel="stylesheet"/>
   </head>
   <header>
     <nav>
       <ul>
-        <li>
-          <a href="../index.html"><img src="../images/logo.png" alt="" /></a>
-        </li>
+        <li><a href="../index.html"><img src="../images/logo.png"alt=""/></a></li>
         <li><a href="../html/products-boards.html">Boards</a></li>
         <li><a href="../html/products-wetsuits.html">Wetsuits</a></li>
         <li><a href="../html/products.html">Clothing</a></li>
@@ -32,13 +28,15 @@
           <search>
             <input type="search" />
           </search>
-          <button href=""><img src="../images/search.svg" alt="" /></button>
+          <button href="">
+            <img src="../images/search.svg"alt=""/>
+          </button>
         </li>
         <li>
-          <a href=""><img src="../images/profile.svg" alt="" /></a>
+          <a href=""><img src="../images/profile.svg" alt=""/></a>
         </li>
         <li>
-          <a href=""><img src="../images/cart.svg" alt="" /></a>
+          <a href=""><img src="../images/cart.svg"alt=""/></a>
         </li>
       </ul>
     </nav>
@@ -46,6 +44,10 @@
 
   <body>
     <main>
+      <div id="loading">
+        <h1>Processing...</h1>
+        <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
+      </div>
       <div id="container">
         <h1>Thank You!</h1>
         <p>
@@ -56,37 +58,25 @@
           <a href="../index.html">homepage!</a>
         </p>
         <div id="img_container">
-          <img src="../images/checkout.png" alt="bigwave" />
+          <img
+            src="../images/checkout.png"
+            alt="bigwave"
+          />
         </div>
         <div id="helpoptions">
           <a href="">Support</a><a href="">Returns Policy</a><a href="">Help</a>
         </div>
         <div id="greeting">
           <p>Happy Surfing!</p>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="var(--blueColor)"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="lucide lucide-waves"
-          >
-            <path
-              d="M2 6c.6.5 1.2 1 2.5 1C7 7 7 5 9.5 5c2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"
-            />
-            <path
-              d="M2 12c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"
-            />
-            <path
-              d="M2 18c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"
-            />
+          <svg xmlns="http://www.w3.org/2000/svg" width="24"height="24"viewBox="0 0 24 24"fill="none"stroke="var(--blueColor)"stroke-width="2"
+            stroke-linecap="round"stroke-linejoin="round"class="lucide lucide-waves">
+            <path d="M2 6c.6.5 1.2 1 2.5 1C7 7 7 5 9.5 5c2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/>
+            <path d="M2 12c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/>
+            <path d="M2 18c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/>
           </svg>
         </div>
       </div>
     </main>
+    
   </body>
 </html>

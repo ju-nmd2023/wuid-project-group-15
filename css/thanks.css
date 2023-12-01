@@ -17,6 +17,9 @@ main {
   justify-content: center;
 }
 #container {
+  opacity:0;
+  
+  transition:0.4s ease;
   margin: 0;
   display: flex;
   flex-direction: column;
@@ -33,7 +36,6 @@ main {
 #img_container {
   height: 25vh;
   overflow: hidden;
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -41,6 +43,9 @@ main {
 #container img {
   max-width: 100%;
   vertical-align: middle;
+}
+#container p{
+  margin-bottom:2vh;
 }
 #helpoptions {
   display: flex;
@@ -52,14 +57,70 @@ main {
   margin-top: 5vh;
 }
 
+#loading{
+  position: absolute;
+  display:block;
+  width:100%;
+  margin-left: auto;
+  margin-right:auto;
+  transition: 0.1s ease;
+}
+
+/*Loading spinner from: https://loading.io/css/*/
+.lds-ring {
+  display: inline-block;
+  position: relative;
+  width: 120px;
+  height: 120px;
+}
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  margin: 8px;
+  border: 8px solid white;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: var(--blueColor) transparent transparent transparent;
+}
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
 @media screen and (max-width: 1200px) {
   #container {
     width: 70%;
   }
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 768px) {
   #container {
     width: 80%;
+  }
+  #img_container{
+    height:15vh;
+  }
+  #container h1{
+    font-size: 2rem;
+  }
+  #container p{
+    font-size: 1rem;
   }
 }
