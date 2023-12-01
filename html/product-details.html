@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../css/main.css" />
     <link rel="stylesheet" href="../css/product-details.css" />
     <script src="../js/main.js" defer></script>
+    <script src="../js/product-details.js" defer></script>
     <link
       href="https://api.fontshare.com/v2/css?f[]=synonym@1&f[]=chillax@1&display=swap"
       rel="stylesheet"
@@ -18,14 +19,17 @@
         <li>
           <a href="../index.html"><img src="../images/logo.png" alt="" /></a>
         </li>
-        <li><a href="">Boards</a></li>
-        <li><a href="">Wetsuits</a></li>
-        <li><a href="">Clothing</a></li>
-        <li><a href="">Accessories</a></li>
+        <li><a href="../html/products.html">Boards</a></li>
+        <li><a href="../html/products.html">Wetsuits</a></li>
+        <li><a href="../html/products.html">Clothing</a></li>
+        <li><a href="../html/products.html">Accessories</a></li>
       </ul>
       <ul>
         <li>
-          <a href=""><img src="../images/search.svg" alt="" /></a>
+          <search>
+            <input type="search" />
+          </search>
+          <button href=""><img src="../images/search.svg" alt="" /></button>
         </li>
         <li>
           <a href=""><img src="../images/profile.svg" alt="" /></a>
@@ -36,8 +40,12 @@
       </ul>
     </nav>
   </header>
+
   <body>
-    <section id="product-link"><a href="">Home / Boards / Surf</a></section>
+    <section id="product-link">
+      <a href="../index.html">Home</a> / <a href="products.html">Boards</a> /
+      <a href="products.html">Surf</a>
+    </section>
     <main>
       <section id="pictures">
         <img src="../images/boards/surfBoard1.jpg" alt="" />
@@ -57,11 +65,11 @@
         </section>
         <section id="buttons">
           <section id="size-buttons">
-            <button class="button-border">5' 10</button>
-            <button class="button-border">6' 2</button>
-            <button class="button-border">6' 4</button>
-            <button class="button-border">6' 7</button>
-            <button class="button-border">7' 2</button>
+            <button class="button-border size-button">5' 10</button>
+            <button class="button-border size-button">6' 2</button>
+            <button class="button-border size-button">6' 4</button>
+            <button class="button-border size-button">6' 7</button>
+            <button class="button-border size-button">7' 2</button>
           </section>
           <button class="button" id="add-to-cart">Add to cart</button>
           <section id="small-links">

@@ -8,7 +8,7 @@ main {
 }
 
 body {
-  background-color: var(--BackgroundColor);
+  background-color: var(--backgroundColor);
   margin: 0;
 }
 
@@ -16,6 +16,7 @@ body {
   display: flex;
   flex-direction: row;
 }
+
 #product_head a,
 p {
   margin: 0;
@@ -118,16 +119,16 @@ p {
   height: 3rem;
   font-size: 0.9rem;
   text-align: center;
-  background-color: var(--BackgroundColor);
+  background-color: var(--backgroundColor);
   border: 1px solid var(--darkTextColor);
   border-radius: 8px;
   cursor: pointer;
 }
 
 .button_select {
-  background-color: var(--BlueColor);
-  color: var(--BackgroundColor);
-  stroke: var(--BackgroundColor);
+  background-color: var(--blueColor);
+  color: var(--backgroundColor);
+  stroke: var(--backgroundColor);
 }
 
 @media screen and (max-width: 1200px) {
