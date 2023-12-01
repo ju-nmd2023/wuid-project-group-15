@@ -1,7 +1,7 @@
 :root {
-  --BlueColor: #259d94;
-  --BeigeColor: #eed0b7;
-  --BackgroundColor: #f3decc;
+  --blueColor: #259d94;
+  --beigeColor: #eed0b7;
+  --backgroundColor: #f3decc;
   --lightOverlayColor: #faeae2;
   --backgroundGradient: linear-gradient(180deg, #eed0b7 0%, #f8e5dc 100%);
   --darkTextColor: #333333;
@@ -24,7 +24,7 @@ h4,
 h5,
 h6 {
   font-family: "Chillax", sans-serif;
-  color: var(--BlueColor);
+  color: var(--blueColor);
 }
 
 .button,
@@ -42,7 +42,7 @@ h6 {
   justify-content: center;
   position: relative;
   transition: all 0.3s ease-in-out;
-  background-color: var(--BlueColor);
+  background-color: var(--blueColor);
   font-family: inherit;
   cursor: pointer;
 }
@@ -57,9 +57,9 @@ main:has(.button) {
 }
 
 .button-border {
-  color: var(--BlueColor);
+  color: var(--blueColor);
   background: transparent;
-  outline: 3px solid var(--BlueColor);
+  outline: 3px solid var(--blueColor);
   margin: 3px;
 }
 
@@ -88,7 +88,7 @@ nav ul {
 
 nav ul a {
   text-decoration: none;
-  color: var(--BlueColor);
+  color: var(--blueColor);
   font-size: 1.2rem;
   font-weight: 500;
   transition: all 0.3s ease-in-out;
@@ -96,4 +96,41 @@ nav ul a {
 
 nav ul:first-child img {
   height: 50px;
+}
+
+nav ul li:first-child {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+nav ul search {
+  display: flex;
+  justify-content: end;
+}
+
+nav ul search input {
+  width: 0px;
+  border-radius: 9999px;
+  border: none;
+  height: 36px;
+  outline: 1px transparent solid;
+  transition: all 0.4s;
+}
+
+nav ul search input:focus {
+  width: 400px;
+  padding: 0.6rem 1rem;
+  outline: 1px var(--blueColor) solid;
+}
+
+nav ul button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+nav ul:has(button:focus) search input {
+  padding: 0.6rem 1rem;
+  width: 400px;
 }

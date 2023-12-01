@@ -1,6 +1,6 @@
 body {
   padding-top: 90px;
-  background-color: var(--BackgroundColor);
+  background-color: var(--backgroundColor);
 }
 
 a {
@@ -32,6 +32,7 @@ main {
   max-width: 1400px;
   margin: auto;
   padding: 2rem;
+  font-weight: 500;
 }
 
 #pictures {
@@ -46,7 +47,7 @@ main {
 #pictures img {
   width: 100%;
   border-radius: 2rem;
-  border: 2px solid var(--BlueColor);
+  border: 2px solid var(--blueColor);
 }
 
 #details {
@@ -93,7 +94,13 @@ main {
 }
 
 #size-buttons .button-border {
-  --BlueColor: #333333;
+  --blueColor: #333333;
+  transition: all 0.15s;
+}
+
+#size-buttons .button-border.selected {
+  background-color: var(--blueColor);
+  color: white;
 }
 
 #add-to-cart {
@@ -163,7 +170,7 @@ aside div::after {
   background-image: linear-gradient(
     to right,
     #f3decc00 80%,
-    var(--BackgroundColor)
+    var(--backgroundColor)
   );
   pointer-events: none;
 }
@@ -174,7 +181,7 @@ aside section::-webkit-scrollbar {
 
 aside section img {
   border-radius: 2rem;
-  border: 2px solid var(--BlueColor);
+  border: 2px solid var(--blueColor);
 }
 
 aside h4 {
