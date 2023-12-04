@@ -118,7 +118,7 @@ header.active {
   position: relative;
 }
 
-#nav ul a::after {
+#nav ul li > a::after {
   content: "";
   position: absolute;
   bottom: -2px;
