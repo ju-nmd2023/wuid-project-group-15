@@ -63,21 +63,44 @@ main:has(.button) {
   margin: 3px;
 }
 
-nav {
+header {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
+  justify-content: center;
   background-color: transparent;
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 100;
+  transition: all 0.15s ease-in-out;
+  border-bottom: 1px solid transparent;
+}
+
+header.active {
+  background-color: var(--backgroundColor);
+  border-bottom: 1px solid var(--blueColor);
+}
+
+#nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: transparent;
+  width: 100%;
+  max-width: 1920px;
   height: 90px;
   transition: all 0.3s ease-in-out;
 }
 
-nav ul {
+#nav > a:first-child {
+  display: none;
+}
+
+#nav ul:nth-child(2) {
+  display: none;
+}
+
+#nav ul {
   height: inherit;
   position: relative;
   list-style: none;
@@ -86,30 +109,49 @@ nav ul {
   gap: 3rem;
 }
 
-nav ul a {
+#nav ul a {
   text-decoration: none;
   color: var(--blueColor);
   font-size: 1.2rem;
   font-weight: 500;
   transition: all 0.3s ease-in-out;
+  position: relative;
 }
 
-nav ul:first-child img {
+#nav ul a::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  border-radius: 2px;
+  display: block;
+  width: 0;
+  height: 3px;
+  background-color: var(--blueColor);
+  transition: all 0.2s ease-in-out;
+  left: 50%;
+}
+
+#nav ul a:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+#nav ul:nth-child(3) img {
   height: 50px;
 }
 
-nav ul li:first-child {
+#nav ul li:first-child {
   display: flex;
   align-items: center;
   gap: 1rem;
 }
 
-nav ul search {
+#desktop-search {
   display: flex;
   justify-content: end;
 }
 
-nav ul search input {
+#desktop-search input {
   width: 0px;
   border-radius: 9999px;
   border: none;
@@ -118,21 +160,282 @@ nav ul search input {
   transition: all 0.4s;
 }
 
-nav ul search input:focus {
-  width: 400px;
+#desktop-search.active input {
+  width: 350px;
   padding: 0.6rem 1rem;
   outline: 1px var(--blueColor) solid;
 }
 
-nav ul button {
+#nav ul button {
   background: transparent;
   border: none;
   cursor: pointer;
 }
 
-nav ul:has(button:focus) search input {
-  padding: 0.6rem 1rem;
-  width: 400px;
+body:has(#mobile-nav.active) {
+  overflow: hidden;
+}
+
+#mobile-nav {
+  position: fixed;
+  top: -100%;
+}
+
+#mobile-nav.active {
+  top: 0;
+}
+
+#mobile-nav.active .opacity-bg {
+  opacity: 1;
+  pointer-events: all;
+}
+
+#mobile-nav {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 101;
+  transition: all 0.4s ease;
+}
+
+#mobile-nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  text-align: center;
+}
+
+#mobile-nav ul a {
+  text-decoration: none;
+  color: var(--whiteColor);
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.opacity-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(16px);
+  z-index: -1;
+  transition: all 0.3s ease-in-out;
+  pointer-events: none;
+  padding: 2rem;
+}
+
+.opacity-bg img {
+  width: 32px;
+}
+
+#search {
+  z-index: 102;
+  display: none;
+}
+
+li:has(#cart-button:focus) #dropdown-cart,
+#dropdown-cart:focus {
+  right: 2rem;
+}
+
+#dropdown-cart {
+  position: fixed;
+  right: -100%;
+  top: 91px;
+  max-width: 420px; /* Blaze it */
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: var(--backgroundColor) !important;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 12px 12px 24px rgba(0, 0, 0, 0.2);
+  cursor: default !important;
+  transition: all 0.5s ease-in-out;
+  z-index: -5;
+}
+
+#dropdown-cart div:first-child {
+  background-color: var(--blueColor);
+  width: 100%;
+}
+
+#dropdown-cart div:first-child p {
+  color: var(--whiteColor);
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 1rem 2rem;
+  text-align: center;
+}
+
+#dropdown-cart #cart-item {
+  max-width: 420px; /* Blaze it */
+  height: auto;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: start;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+#dropdown-cart #cart-item p {
+  font-size: 1rem;
+  font-weight: 500;
+  text-align: left;
+  color: var(--grayTextColor);
+}
+
+#dropdown-cart #cart-item > img {
+  width: 6rem;
+  height: auto;
+  border-radius: 1rem;
+  border: 3px solid var(--blueColor);
+}
+
+#dropdown-cart #cart-item div:last-child {
+  display: flex;
+  align-self: flex-end;
+  align-items: end;
+}
+
+#dropdown-cart hr {
+  margin: 0 1rem;
+  border: 1px solid var(--blueColor);
+}
+
+#dropdown-cart > p {
+  padding: 0 1rem;
+}
+
+#dropdown-cart strong {
+  font-weight: 600;
+}
+
+#dropdown-cart a.button {
+  color: white;
+  width: calc(100% - 2rem);
+  margin: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+  #search {
+    display: block;
+  }
+  #search.active .opacity-bg {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  #search search {
+    position: fixed;
+    z-index: 103;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    opacity: 0;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    pointer-events: none;
+    gap: 2rem;
+  }
+
+  #search search input {
+    width: 18rem;
+    border-radius: 9999px;
+    border: none;
+    height: 36px;
+    padding: 0.6rem 1rem;
+    outline: 1px var(--blueColor) solid;
+    transition: all 0.4s;
+    pointer-events: all;
+    opacity: 0;
+  }
+
+  #search.active search,
+  #search.active search input {
+    opacity: 1;
+  }
+
+  #search search > div {
+    display: flex;
+    justify-content: center;
+    max-width: 18rem;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  #search search img {
+    width: 64px;
+    border-radius: 0.5rem;
+  }
+
+  #search search div div {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #search search div div p {
+    font-size: 1rem;
+    font-weight: 500;
+  }
+
+  #nav {
+    padding: 1rem 2rem;
+  }
+
+  #nav img {
+    height: 32px;
+  }
+
+  #nav ul:nth-child(2) {
+    display: flex;
+  }
+
+  #nav > a:first-child {
+    position: absolute;
+    left: calc(50% - 44px);
+    top: calc(50% - 16px);
+    display: block;
+  }
+
+  #nav ul:nth-child(3) {
+    display: none;
+  }
+
+  #nav ul:last-child {
+    gap: 0.5rem;
+  }
+
+  #nav search input {
+    display: none;
+  }
+
+  li:has(#cart-button:focus) #dropdown-cart,
+  #dropdown-cart:focus {
+    right: 0;
+  }
+
+  #dropdown-cart {
+    max-width: 100%;
+    border-radius: 0 0 1rem 1rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  #nav {
+    padding: 0.5rem 1rem;
+  }
 }
 
 footer {

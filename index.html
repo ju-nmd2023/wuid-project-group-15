@@ -11,7 +11,13 @@
     <link href="https://api.fontshare.com/v2/css?f[]=synonym@1&f[]=chillax@1&display=swap" rel="stylesheet" />
   </head>
   <header>
-    <nav>
+    <nav id="nav">
+      <a href="index.html"
+        ><img src="./images/logo.png" alt="" id="mobile-logo"
+      /></a>
+      <ul onclick="toggleMenu()">
+        <img src="./images/menu.svg" alt="" />
+      </ul>
       <ul>
         <li>
           <a href="./index.html"><img src="./images/logo.png" alt="" /></a>
@@ -34,6 +40,17 @@
         <li>
           <a href=""><img src="./images/cart.svg" alt="" /></a>
         </li>
+      </ul>
+    </nav>
+    <nav id="mobile-nav">
+      <div id="opacity-bg" onclick="toggleMenu()">
+        <img src="./images/x.svg" alt="X" />
+      </div>
+      <ul>
+        <li><a href="./html/products-boards.html">Boards</a></li>
+        <li><a href="./html/products-wetsuits.html">Wetsuits</a></li>
+        <li><a href="./html/products.html">Clothing</a></li>
+        <li><a href="./html/products.html">Accessories</a></li>
       </ul>
     </nav>
   </header>

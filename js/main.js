@@ -1,14 +1,26 @@
-let nav = document.querySelector("nav");
+//-----------------Scroll change nav bg and border-----------------//
+let nav = document.querySelector("header");
 
 window.addEventListener("scroll", () => {
   let y = window.scrollY;
-  if (nav) {
-    if (y > 1) {
-      nav.style.background = "#f3decc";
-      nav.style.borderBottom = "1px solid #259d9466";
-    } else {
-      nav.style.background = "#f3decc00";
-      nav.style.borderBottom = "1px solid #259d9400";
-    }
+  if (y > 1) {
+    nav.classList.add("active");
+  } else {
+    nav.classList.remove("active");
   }
 });
+
+//-----------------Mobile Menu-----------------//
+
+let menu = document.querySelector("#mobile-nav");
+let search = document.querySelector("#search");
+let desktopSearch = document.querySelector("#desktop-search");
+
+function toggleMenu() {
+  menu.classList.toggle("active");
+}
+
+function toggleSearch() {
+  search.classList.toggle("active");
+  desktopSearch.classList.toggle("active");
+}

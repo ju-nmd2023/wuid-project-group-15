@@ -8,10 +8,19 @@
     <link rel="stylesheet" href="../css/product-details.css" />
     <script src="../js/main.js" defer></script>
     <script src="../js/product-details.js" defer></script>
-    <link href="https://api.fontshare.com/v2/css?f[]=synonym@1&f[]=chillax@1&display=swap" rel="stylesheet" />
+    <link
+      href="https://api.fontshare.com/v2/css?f[]=synonym@1&f[]=chillax@1&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <header>
-    <nav>
+    <nav id="nav">
+      <a href="../index.html"
+        ><img src="../images/logo.png" alt="" id="mobile-logo"
+      /></a>
+      <ul onclick="toggleMenu()">
+        <img src="../images/menu.svg" alt="" />
+      </ul>
       <ul>
         <li>
           <a href="../index.html"><img src="../images/logo.png" alt="" /></a>
@@ -23,25 +32,84 @@
       </ul>
       <ul>
         <li>
-          <search>
+          <search id="desktop-search">
             <input type="search" />
           </search>
-          <button href=""><img src="../images/search.svg" alt="" /></button>
+          <button href="">
+            <img src="../images/search.svg" alt="" onclick="toggleSearch()" />
+          </button>
         </li>
         <li>
           <a href=""><img src="../images/profile.svg" alt="" /></a>
         </li>
         <li>
-          <a href=""><img src="../images/cart.svg" alt="" /></a>
+          <button id="cart-button">
+            <img src="../images/cart.svg" alt="" />
+          </button>
+          <button id="dropdown-cart">
+            <div>
+              <p>Cart items</p>
+            </div>
+            <div id="cart-item">
+              <img src="../images/boards/surfBoard1.jpg" alt="" />
+              <div>
+                <p>Pyzel Ghost Surfboard Futures - White</p>
+                <p>
+                  Qty: 1x <br />
+                  Size: 6' 2 <br />
+                  Color: White
+                </p>
+              </div>
+              <div>
+                <img src="../images/trash.svg" alt="" />
+              </div>
+            </div>
+            <hr />
+            <p>Total: <strong>1499kr:-</strong></p>
+            <a href="./checkout.html" class="button">Checkout</a>
+          </button>
         </li>
       </ul>
     </nav>
+    <nav id="mobile-nav">
+      <div class="opacity-bg" onclick="toggleMenu()">
+        <img src="../images/x.svg" alt="X" />
+      </div>
+      <ul>
+        <li><a href="../html/products-boards.html">Boards</a></li>
+        <li><a href="../html/products-wetsuits.html">Wetsuits</a></li>
+        <li><a href="../html/products.html">Clothing</a></li>
+        <li><a href="../html/products.html">Accessories</a></li>
+      </ul>
+    </nav>
+    <section id="search">
+      <div class="opacity-bg" onclick="toggleSearch()">
+        <img src="../images/x.svg" alt="X" />
+      </div>
+      <search>
+        <input type="search" />
+        <div>
+          <img src="../images/boards/surfBoard12.jpg" alt="" />
+          <div>
+            <p>Pyzel Ghost Surfboard Futures - White</p>
+            <p>6999 kr:-</p>
+          </div>
+        </div>
+        <div>
+          <img src="../images/boards/surfBoard11.jpg" alt="" />
+          <div>
+            <p>Pyzel Ghost Surfboard Futures - White</p>
+            <p>6999 kr:-</p>
+          </div>
+        </div>
+      </search>
+    </section>
   </header>
-
   <body>
     <section id="product-link">
-      <a href="../index.html">Home</a> / <a href="products.html">Boards</a> /
-      <a href="products.html">Surf</a>
+      <a href="../index.html">Home</a> /
+      <a href="products-boards.html">Boards</a> /
+      <a href="products-boards.html">Surf</a>
     </section>
     <main>
       <section id="pictures">
@@ -53,14 +121,16 @@
       <section id="details">
         <section>
           <h1>Pyzel Ghost Surfboard Futures - White</h1>
-          <p>6999 kr.</p>
+          <p>6999 kr:-</p>
         </section>
         <section>
-          <p id="description">The magic stick John John rode to his second World Title!</p>
+          <p id="description">
+            The magic stick John John rode to his second World Title!
+          </p>
         </section>
         <section id="buttons">
           <section id="size-buttons">
-            <button class="button-border size-button">5' 10</button>
+            <button class="button-border size-button selected">5' 10</button>
             <button class="button-border size-button">6' 2</button>
             <button class="button-border size-button">6' 4</button>
             <button class="button-border size-button">6' 7</button>
@@ -73,37 +143,101 @@
           </section>
         </section>
         <section id="details-dropdowns">
-          <button>
+          <button class="dropdownButton">
             <div>
               Product Specifications
               <img src="../images/chevron.svg" alt="" />
             </div>
-            <div></div>
+            <div>
+              <p>
+                Name: Pyzel Ghost Surfboard 6ft 1 Futures <br />
+                Color: White <br />
+                Ability: Intermediate/Advanced <br />
+                Volume: 32.7 <br />
+                litres Material: PU/Foam
+              </p>
+            </div>
           </button>
-          <button>
+          <button class="dropdownButton">
             <div>Size guide <img src="../images/chevron.svg" alt="" /></div>
-            <div></div>
+            <div>
+              <p>
+                <strong>Your weight</strong> <br />
+                45 - 72kg <br />
+                72 - 81kg <br />
+                81 - 90kg <br />
+                +90 kg
+              </p>
+              <p>
+                <strong>Your board</strong> <br />
+                5' 10" - 6' 2" <br />
+                6' 4" - 6' 7" <br />
+                6' 8" - 7' 2" <br />
+                7' 6 - 8'
+              </p>
+            </div>
           </button>
-          <button>
+          <button class="dropdownButton">
             <div>Delivery <img src="../images/chevron.svg" alt="" /></div>
-            <div></div>
+            <div>
+              <p>
+                <strong>When?</strong> If you live in Sweden we can deliver it
+                in 3-5 business days. If you live in another country it will
+                take up to 3 weeks to ship. <br />
+                <strong>Price?</strong> Shipping is free when purchasing above
+                5000kr. Other wise it costs 50-300kr depending on size and
+                weight of the package.
+              </p>
+            </div>
           </button>
         </section>
       </section>
     </main>
+    <hr />
     <aside>
       <h4>More like this</h4>
       <div>
         <section>
-          <img src="../images/boards/surfBoard2.jpg" alt="" />
-          <img src="../images/boards/surfBoard10.jpg" alt="" />
-          <img src="../images/boards/surfBoard9.jpg" alt="" />
-          <img src="../images/boards/surfBoard8.jpg" alt="" />
-          <img src="../images/boards/surfBoard7.jpg" alt="" />
-          <img src="../images/boards/surfBoard6.jpg" alt="" />
-          <img src="../images/boards/surfBoard5.jpg" alt="" />
-          <img src="../images/boards/surfBoard4.jpg" alt="" />
-          <img src="../images/boards/surfBoard3.jpg" alt="" />
+          <a href="">
+            <img src="../images/boards/surfBoard2.jpg" alt="" />
+            <p>Pyzel Ghost Surfboard Futures - White</p>
+            <p>6999 kr:-</p>
+          </a>
+          <a href="">
+            <img src="../images/boards/surfBoard3.jpg" alt="" />
+            <p>Pyzel Ghost Surfboard Futures - White</p>
+            <p>6999 kr:-</p>
+          </a>
+          <a href="">
+            <img src="../images/boards/surfBoard4.jpg" alt="" />
+            <p>Pyzel Ghost Surfboard Futures - White</p>
+            <p>6999 kr:-</p>
+          </a>
+          <a href="">
+            <img src="../images/boards/surfBoard5.jpg" alt="" />
+            <p>Pyzel Ghost Surfboard Futures - White</p>
+            <p>6999 kr:-</p>
+          </a>
+          <a href="">
+            <img src="../images/boards/surfBoard6.jpg" alt="" />
+            <p>Pyzel Ghost Surfboard Futures - White</p>
+            <p>6999 kr:-</p>
+          </a>
+          <a href="">
+            <img src="../images/boards/surfBoard7.jpg" alt="" />
+            <p>Pyzel Ghost Surfboard Futures - White</p>
+            <p>6999 kr:-</p>
+          </a>
+          <a href="">
+            <img src="../images/boards/surfBoard8.jpg" alt="" />
+            <p>Pyzel Ghost Surfboard Futures - White</p>
+            <p>6999 kr:-</p>
+          </a>
+          <a href="">
+            <img src="../images/boards/surfBoard9.jpg" alt="" />
+            <p>Pyzel Ghost Surfboard Futures - White</p>
+            <p>6999 kr:-</p>
+          </a>
         </section>
       </div>
     </aside>

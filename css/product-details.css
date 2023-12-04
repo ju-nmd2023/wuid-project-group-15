@@ -21,18 +21,22 @@ p {
   font-size: 1.3rem;
 }
 
+#product-link {
+  max-width: 1400px;
+  margin: auto;
+  padding: 10px 0;
+  font-weight: 500;
+}
+
 main {
   display: flex;
-  padding: 2rem;
+  padding: 1rem 0;
   max-width: 1400px;
   margin: auto;
 }
 
-#product-link {
-  max-width: 1400px;
-  margin: auto;
-  padding: 2rem;
-  font-weight: 500;
+main section:first-child {
+  flex-grow: 1;
 }
 
 #pictures {
@@ -52,7 +56,7 @@ main {
 
 #details {
   background: var(--lightOverlayColor);
-  width: 420px;
+  max-width: 420px;
   height: fit-content;
   position: sticky;
   top: 100px;
@@ -117,6 +121,7 @@ main {
 #details-dropdowns button {
   background: transparent;
   display: flex;
+  flex-direction: column;
   border: none;
   padding: 0.5rem;
   width: 100%;
@@ -131,10 +136,52 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+#details-dropdowns button div:first-child img {
+  transform: rotate(0deg);
+  transition: all 0.3s ease-in-out;
+}
+
+#details-dropdowns button div:last-child {
+  width: 100%;
+  height: 0px;
+  overflow: hidden;
+  display: flex;
+  padding: 0;
+  justify-content: space-between;
+  transition: all 0.3s ease-in-out;
+}
+
+#details-dropdowns button div:last-child p {
+  font-size: 1rem;
+  font-weight: 500;
+  text-align: left;
+  color: var(--grayTextColor);
+}
+
+#details-dropdowns button div:last-child p strong {
+  font-weight: 600;
+  color: var(--grayTextColor);
 }
 
 #details-dropdowns button:first-child {
   border-top: 1px var(--darkTextColor) solid;
+}
+
+#details-dropdowns button.active div:last-child {
+  height: 120px;
+  padding: 0.5rem 0 0 0;
+}
+
+#details-dropdowns button.active:last-child div:last-child {
+  height: 140px;
+}
+
+#details-dropdowns button.active div:first-child img {
+  transform: rotate(180deg);
 }
 
 aside {
@@ -144,10 +191,17 @@ aside {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  padding: 2rem;
+  padding: 2rem 0;
 }
 
-aside section {
+body > hr {
+  border: 1px solid var(--blueColor);
+  width: 100%;
+  max-width: 1400px;
+  margin: auto;
+}
+
+aside div section {
   display: flex;
   flex-wrap: nowrap;
   overflow-x: scroll;
@@ -159,13 +213,22 @@ aside div {
   position: relative;
 }
 
+aside section a {
+  padding-bottom: 1rem;
+  text-decoration: none;
+}
+
+aside section a p {
+  font-size: 1.1rem;
+}
+
 aside div::after {
   position: absolute;
   content: "";
   top: 0;
   width: 100%;
   left: 0;
-  bottom: 0;
+  bottom: 4px;
   z-index: 10;
   background-image: linear-gradient(
     to right,
@@ -175,8 +238,18 @@ aside div::after {
   pointer-events: none;
 }
 
-aside section::-webkit-scrollbar {
-  display: none;
+aside div section::-webkit-scrollbar {
+  position: relative;
+  z-index: 50;
+  height: 4px;
+  width: 4px;
+  background-color: var(--lightOverlayColor);
+  border-radius: 2px;
+}
+
+aside div section::-webkit-scrollbar-thumb {
+  background-color: #00000066;
+  border-radius: 2px;
 }
 
 aside section img {
@@ -187,4 +260,104 @@ aside section img {
 aside h4 {
   font-family: "synonym", sans-serif;
   color: var(--darkTextColor);
+}
+
+@media screen and (max-width: 1464px) and (min-width: 769px) {
+  #product-link {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  main {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  aside {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  body > hr {
+    max-width: calc(100% - 4rem);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #product-link {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  main {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  #pictures {
+    padding: 0 2rem;
+    display: flex;
+    overflow-x: scroll;
+  }
+
+  main #pictures::-webkit-scrollbar {
+    position: relative;
+    z-index: 50;
+    height: 4px;
+    width: 4px;
+  }
+
+  main #pictures::-webkit-scrollbar-thumb {
+    background-color: #00000066;
+    border-radius: 2px;
+  }
+
+  main #pictures::-webkit-scrollbar-track {
+    background-color: var(--lightOverlayColor);
+    border-radius: 2px;
+  }
+
+  main #pictures::-webkit-scrollbar-button:end:decrement,
+  main #pictures::-webkit-scrollbar-button:start:increment {
+    background-color: var(--backgroundColor);
+    width: 2rem;
+  }
+
+  #pictures img {
+    margin-bottom: 1rem;
+  }
+
+  #details {
+    background: transparent;
+    padding: 0;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    max-width: 100%;
+  }
+
+  #details section {
+    width: 100%;
+  }
+
+  #size-buttons .button-border {
+    padding: 0.5rem 1rem;
+  }
+
+  #size-buttons {
+    flex-wrap: wrap;
+  }
+
+  body > hr {
+    display: none;
+  }
+
+  aside {
+    padding-top: 0;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  aside p {
+    font-size: 1rem;
+  }
 }
