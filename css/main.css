@@ -134,3 +134,37 @@ nav ul:has(button:focus) search input {
   padding: 0.6rem 1rem;
   width: 400px;
 }
+
+footer {
+  background-color: var(--blueColor);
+  color: var(--whiteColor);
+  padding: 2rem 2rem 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0.7rem;
+  width: 100%;
+}
+.gridSection h4,
+.gridSection a,
+footer h6 {
+  color: var(--whiteColor);
+  text-decoration: none;
+}
+footer section {
+  margin: auto;
+  display: flex;
+  min-width: 65%;
+  justify-content: space-between;
+  gap: 2rem;
+}
+.gridSection {
+  display: flex;
+  flex-direction: column;
+}
+.gridSection h4 {
+  margin-bottom: 1rem;
+}
+.gridSection a {
+  margin-bottom: 0.7rem;
+}

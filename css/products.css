@@ -30,8 +30,8 @@ p {
   font-family: "Chillax", sans-serif;
   font-weight: 500;
   font-size: 2rem;
-  margin:2vh;
-  margin-left:0;
+  margin: 2vh;
+  margin-left: 0;
   color: var(--darkTextColor);
   text-align: left;
 }
@@ -84,16 +84,16 @@ p {
 }
 .mainimg {
   position: relative;
-  width:100%;
+  width: 100%;
   max-width: 100%;
 }
 .hoverimg {
   position: absolute;
   opacity: 0;
-  left:0;
-  top:0;
-  
-  width:100%;
+  left: 0;
+  top: 0;
+
+  width: 100%;
   max-width: 100%;
 }
 #content {
@@ -122,7 +122,6 @@ p {
   .product_box p {
     font-size: 1.3rem;
   }
-  
 }
 
 @media screen and (max-width: 1200px) {
@@ -143,7 +142,7 @@ p {
   .mainimg {
     max-height: 200%;
     max-width: 200%;
-    width:auto;
+    width: auto;
     display: block;
     margin: auto;
   }

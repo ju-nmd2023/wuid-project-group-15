@@ -1,12 +1,8 @@
 body {
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   background: rgb(238, 208, 183);
-  background: linear-gradient(
-    180deg,
-    rgba(238, 208, 183, 1) 0%,
-    rgba(250, 241, 235, 1) 100%
-  );
+  background: linear-gradient(180deg, rgba(238, 208, 183, 1) 0%, rgba(250, 241, 235, 1) 100%);
 }
 main {
   text-align: center;
@@ -17,9 +13,9 @@ main {
   justify-content: center;
 }
 #container {
-  opacity:0;
-  
-  transition:0.4s ease;
+  opacity: 0;
+
+  transition: 0.4s ease;
   margin: 0;
   display: flex;
   flex-direction: column;
@@ -44,8 +40,8 @@ main {
   max-width: 100%;
   vertical-align: middle;
 }
-#container p{
-  margin-bottom:2vh;
+#container p {
+  margin-bottom: 2vh;
 }
 #helpoptions {
   display: flex;
@@ -57,12 +53,12 @@ main {
   margin-top: 5vh;
 }
 
-#loading{
+#loading {
   position: absolute;
-  display:block;
-  width:100%;
+  display: block;
+  width: 100%;
   margin-left: auto;
-  margin-right:auto;
+  margin-right: auto;
   transition: 0.1s ease;
 }
 
@@ -103,7 +99,6 @@ main {
   }
 }
 
-
 @media screen and (max-width: 1200px) {
   #container {
     width: 70%;
@@ -114,13 +109,13 @@ main {
   #container {
     width: 80%;
   }
-  #img_container{
-    height:15vh;
+  #img_container {
+    height: 15vh;
   }
-  #container h1{
+  #container h1 {
     font-size: 2rem;
   }
-  #container p{
+  #container p {
     font-size: 1rem;
   }
 }
