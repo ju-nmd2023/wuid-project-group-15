@@ -8,67 +8,126 @@
     <link rel="stylesheet" href="css/index.css" />
     <script src="./js/main.js" defer></script>
     <script src="./js/index.js" defer></script>
-    <link href="https://api.fontshare.com/v2/css?f[]=synonym@1&f[]=chillax@1&display=swap" rel="stylesheet" />
+    <link
+      href="https://api.fontshare.com/v2/css?f[]=synonym@1&f[]=chillax@1&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <header>
     <nav id="nav">
-      <a href="index.html"
-        ><img src="./images/logo.png" alt="" id="mobile-logo"
+      <a href="../index.html"
+        ><img src="../images/logo.png" alt="" id="mobile-logo"
       /></a>
       <ul onclick="toggleMenu()">
-        <img src="./images/menu.svg" alt="" />
+        <img src="../images/menu.svg" alt="" />
       </ul>
       <ul>
         <li>
-          <a href="./index.html"><img src="./images/logo.png" alt="" /></a>
+          <a href="../index.html"><img src="../images/logo.png" alt="" /></a>
         </li>
-        <li><a href="./html/products-boards.html">Boards</a></li>
-        <li><a href="./html/products-wetsuits.html">Wetsuits</a></li>
-        <li><a href="./html/products.html">Clothing</a></li>
-        <li><a href="./html/products.html">Accessories</a></li>
+        <li><a href="../html/products-boards.html">Boards</a></li>
+        <li><a href="../html/products-wetsuits.html">Wetsuits</a></li>
+        <li><a href="../html/products.html">Clothing</a></li>
+        <li><a href="../html/products.html">Accessories</a></li>
       </ul>
       <ul>
         <li>
-          <search>
+          <search id="desktop-search">
             <input type="search" />
           </search>
-          <button href=""><img src="./images/search.svg" alt="" /></button>
+          <button href="">
+            <img src="../images/search.svg" alt="" onclick="toggleSearch()" />
+          </button>
         </li>
         <li>
-          <a href=""><img src="./images/profile.svg" alt="" /></a>
+          <a href=""><img src="../images/profile.svg" alt="" /></a>
         </li>
         <li>
-          <a href=""><img src="./images/cart.svg" alt="" /></a>
+          <button id="cart-button">
+            <img src="../images/cart.svg" alt="" />
+          </button>
+          <button id="dropdown-cart">
+            <div>
+              <p>Cart items</p>
+            </div>
+            <div id="cart-item">
+              <img src="../images/boards/surfBoard1.jpg" alt="" />
+              <div>
+                <p>Pyzel Ghost Surfboard Futures - White</p>
+                <p>
+                  Qty: 1x <br />
+                  Size: 6' 2 <br />
+                  Color: White
+                </p>
+              </div>
+              <div>
+                <img src="../images/trash.svg" alt="" />
+              </div>
+            </div>
+            <hr />
+            <p>Total: <strong>1499kr:-</strong></p>
+            <a href="./checkout.html" class="button">Checkout</a>
+          </button>
         </li>
       </ul>
     </nav>
     <nav id="mobile-nav">
-      <div id="opacity-bg" onclick="toggleMenu()">
-        <img src="./images/x.svg" alt="X" />
+      <div class="opacity-bg" onclick="toggleMenu()">
+        <img src="../images/x.svg" alt="X" />
       </div>
       <ul>
-        <li><a href="./html/products-boards.html">Boards</a></li>
-        <li><a href="./html/products-wetsuits.html">Wetsuits</a></li>
-        <li><a href="./html/products.html">Clothing</a></li>
-        <li><a href="./html/products.html">Accessories</a></li>
+        <li><a href="../html/products-boards.html">Boards</a></li>
+        <li><a href="../html/products-wetsuits.html">Wetsuits</a></li>
+        <li><a href="../html/products.html">Clothing</a></li>
+        <li><a href="../html/products.html">Accessories</a></li>
       </ul>
     </nav>
+    <section id="search">
+      <div class="opacity-bg" onclick="toggleSearch()">
+        <img src="../images/x.svg" alt="X" />
+      </div>
+      <search>
+        <input type="search" />
+        <div>
+          <img src="../images/boards/surfBoard12.jpg" alt="" />
+          <div>
+            <p>Pyzel Ghost Surfboard Futures - White</p>
+            <p>6999 kr:-</p>
+          </div>
+        </div>
+        <div>
+          <img src="../images/boards/surfBoard11.jpg" alt="" />
+          <div>
+            <p>Pyzel Ghost Surfboard Futures - White</p>
+            <p>6999 kr:-</p>
+          </div>
+        </div>
+      </search>
+    </section>
   </header>
   <body>
     <picture>
-      <source media="(max-width: 800px)" srcset="images/home/mobileBackground.png" />
+      <source
+        media="(max-width: 800px)"
+        srcset="images/home/mobileBackground.png"
+      />
       <img id="backgroundImage" src="./images/home/background.png" />
     </picture>
     <img id="surferImage" src="./images/home/paralaxSurfer.png" alt="" />
     <main>
       <h1>Every wave is a new adventure</h1>
       <p>
-        With top of the line gear from SurfZen, your only worry should be finding the right wave. Browse excellent apparel, boards and accessories,
-        all in one place!
+        With top of the line gear from SurfZen, your only worry should be
+        finding the right wave. Browse excellent apparel, boards and
+        accessories, all in one place!
       </p>
       <section id="buttonContainer">
-        <a id="boardButton" href="./html/products-boards.html"><span>Browse Boards</span></a>
-        <a id="clothingButton" href="./html/products-wetsuits.html"><span>Browse Wetsuits</span></a>
+        <a id="boardButton" href="./html/products-boards.html"
+          ><span>Browse Boards</span></a
+        >
+        <a id="clothingButton" href="./html/products-wetsuits.html"
+          ><span>Browse Wetsuits</span></a
+        >
       </section>
     </main>
   </body>

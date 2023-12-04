@@ -11,11 +11,23 @@
 
     <title>Purchase Completed</title>
     <!--Fonts-->
-    <link href="https://api.fontshare.com/v2/css?f[]=chillax@1&display=swap" rel="stylesheet" />
-    <link href="https://api.fontshare.com/v2/css?f[]=synonym@1&display=swap" rel="stylesheet" />
+    <link
+      href="https://api.fontshare.com/v2/css?f[]=chillax@1&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://api.fontshare.com/v2/css?f[]=synonym@1&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <header>
-    <nav>
+    <nav id="nav">
+      <a href="../index.html"
+        ><img src="../images/logo.png" alt="" id="mobile-logo"
+      /></a>
+      <ul onclick="toggleMenu()">
+        <img src="../images/menu.svg" alt="" />
+      </ul>
       <ul>
         <li>
           <a href="../index.html"><img src="../images/logo.png" alt="" /></a>
@@ -27,21 +39,78 @@
       </ul>
       <ul>
         <li>
-          <search>
+          <search id="desktop-search">
             <input type="search" />
           </search>
           <button href="">
-            <img src="../images/search.svg" alt="" />
+            <img src="../images/search.svg" alt="" onclick="toggleSearch()" />
           </button>
         </li>
         <li>
           <a href=""><img src="../images/profile.svg" alt="" /></a>
         </li>
         <li>
-          <a href=""><img src="../images/cart.svg" alt="" /></a>
+          <button id="cart-button">
+            <img src="../images/cart.svg" alt="" />
+          </button>
+          <button id="dropdown-cart">
+            <div>
+              <p>Cart items</p>
+            </div>
+            <div id="cart-item">
+              <img src="../images/boards/surfBoard1.jpg" alt="" />
+              <div>
+                <p>Pyzel Ghost Surfboard Futures - White</p>
+                <p>
+                  Qty: 1x <br />
+                  Size: 6' 2 <br />
+                  Color: White
+                </p>
+              </div>
+              <div>
+                <img src="../images/trash.svg" alt="" />
+              </div>
+            </div>
+            <hr />
+            <p>Total: <strong>1499kr:-</strong></p>
+            <a href="./checkout.html" class="button">Checkout</a>
+          </button>
         </li>
       </ul>
     </nav>
+    <nav id="mobile-nav">
+      <div class="opacity-bg" onclick="toggleMenu()">
+        <img src="../images/x.svg" alt="X" />
+      </div>
+      <ul>
+        <li><a href="../html/products-boards.html">Boards</a></li>
+        <li><a href="../html/products-wetsuits.html">Wetsuits</a></li>
+        <li><a href="../html/products.html">Clothing</a></li>
+        <li><a href="../html/products.html">Accessories</a></li>
+      </ul>
+    </nav>
+    <section id="search">
+      <div class="opacity-bg" onclick="toggleSearch()">
+        <img src="../images/x.svg" alt="X" />
+      </div>
+      <search>
+        <input type="search" />
+        <div>
+          <img src="../images/boards/surfBoard12.jpg" alt="" />
+          <div>
+            <p>Pyzel Ghost Surfboard Futures - White</p>
+            <p>6999 kr:-</p>
+          </div>
+        </div>
+        <div>
+          <img src="../images/boards/surfBoard11.jpg" alt="" />
+          <div>
+            <p>Pyzel Ghost Surfboard Futures - White</p>
+            <p>6999 kr:-</p>
+          </div>
+        </div>
+      </search>
+    </section>
   </header>
 
   <body>
@@ -58,14 +127,18 @@
       <div id="container">
         <h1>Thank You!</h1>
         <p>
-          Your order has been recieved and we’ll begin working on it as quick as possible! A confirmation email will be sent to you shortly with
-          further details, meanwhile don’t hesitate to keep browsing the latest surfgear and clothing back on the
+          Your order has been recieved and we’ll begin working on it as quick as
+          possible! A confirmation email will be sent to you shortly with
+          further details, meanwhile don’t hesitate to keep browsing the latest
+          surfgear and clothing back on the
           <a href="../index.html">homepage!</a>
         </p>
         <div id="img_container">
           <img src="../images/checkout.png" alt="bigwave" />
         </div>
-        <div id="helpoptions"><a href="">Support</a><a href="">Returns Policy</a><a href="">Help</a></div>
+        <div id="helpoptions">
+          <a href="">Support</a><a href="">Returns Policy</a><a href="">Help</a>
+        </div>
         <div id="greeting">
           <p>Happy Surfing!</p>
           <svg
@@ -78,10 +151,17 @@
             stroke-width="2"
             stroke-linecap="round"
             stroke-linejoin="round"
-            class="lucide lucide-waves">
-            <path d="M2 6c.6.5 1.2 1 2.5 1C7 7 7 5 9.5 5c2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1" />
-            <path d="M2 12c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1" />
-            <path d="M2 18c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1" />
+            class="lucide lucide-waves"
+          >
+            <path
+              d="M2 6c.6.5 1.2 1 2.5 1C7 7 7 5 9.5 5c2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"
+            />
+            <path
+              d="M2 12c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"
+            />
+            <path
+              d="M2 18c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"
+            />
           </svg>
         </div>
       </div>
