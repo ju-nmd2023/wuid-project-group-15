@@ -30,3 +30,28 @@ function toggleDropdown(index) {
     dropdownActive = index;
   }
 }
+
+  
+
+
+let arrow = document.getElementById("arrow");
+
+cartButton = document.getElementById("add-to-cart");
+//-play arrow animation on the add to cart click-//
+cartButton.addEventListener("click", function () {
+  if(!arrow.classList.contains('arrow_animation')){
+    arrow.classList.add('arrow_animation');
+  }
+  else{
+    arrow.classList.remove('arrow_animation')
+    setTimeout(function(){
+      arrow.classList.add('arrow_animation');
+  }, 0);
+
+  }
+
+
+})
+
+
+
