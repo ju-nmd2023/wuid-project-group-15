@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Product Details</title>
     <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" type="text/css" href="../css/products.css" />
     <link rel="stylesheet" href="../css/product-details.css" />
+
     <script src="../js/main.js" defer></script>
     <script src="../js/product-details.js" defer></script>
     <link
@@ -25,15 +27,21 @@
         <li>
           <a href="../index.html"><img src="../images/logo.png" alt="" /></a>
         </li>
-        <li><a href="../html/products-boards.html">Boards</a></li>
-        <li><a href="../html/products-wetsuits.html">Wetsuits</a></li>
-        <li><a href="../html/products.html">Clothing</a></li>
-        <li><a href="../html/products.html">Accessories</a></li>
+        <li><a class="hovereffect" href="./products-boards.html">Boards</a></li>
+        <li>
+          <a class="hovereffect" href="./products-wetsuits.html">Wetsuits</a>
+        </li>
+        <li>
+          <a class="hovereffect" href="./products-wetsuits.html">Clothing</a>
+        </li>
+        <li>
+          <a class="hovereffect" href="./products-boards.html">Accessories</a>
+        </li>
       </ul>
       <ul>
         <li>
           <search id="desktop-search">
-            <input type="search" />
+            <input placeholder="Search" type="search" />
           </search>
           <button href="">
             <img src="../images/search.svg" alt="" onclick="toggleSearch()" />
@@ -44,6 +52,23 @@
         </li>
         <li>
           <button id="cart-button">
+            <svg
+              id="arrow"
+              xmlns="http://www.w3.org/2000/svg"
+              width="22"
+              height="22"
+              viewBox="0 0 22 22"
+              fill="none"
+              stroke="var(--blueColor)"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-arrow-down"
+            >
+              <path d="M12 5v14" />
+              <path d="m19 12-7 7-7-7" />
+            </svg>
+
             <img src="../images/cart.svg" alt="" />
           </button>
           <button id="dropdown-cart">
@@ -76,10 +101,10 @@
         <img src="../images/x.svg" alt="X" />
       </div>
       <ul>
-        <li><a href="../html/products-boards.html">Boards</a></li>
-        <li><a href="../html/products-wetsuits.html">Wetsuits</a></li>
-        <li><a href="../html/products.html">Clothing</a></li>
-        <li><a href="../html/products.html">Accessories</a></li>
+        <li><a href="./products-boards.html">Boards</a></li>
+        <li><a href="./products-wetsuits.html">Wetsuits</a></li>
+        <li><a href="./products.html">Clothing</a></li>
+        <li><a href="./products.html">Accessories</a></li>
       </ul>
     </nav>
     <section id="search">
@@ -87,19 +112,19 @@
         <img src="../images/x.svg" alt="X" />
       </div>
       <search>
-        <input type="search" />
+        <input placeholder="Search" type="search" />
         <div>
           <img src="../images/boards/surfBoard12.jpg" alt="" />
           <div>
             <p>Pyzel Ghost Surfboard Futures - White</p>
-            <p>6999 kr</p>
+            <p>6999:-</p>
           </div>
         </div>
         <div>
           <img src="../images/boards/surfBoard11.jpg" alt="" />
           <div>
             <p>Pyzel Ghost Surfboard Futures - White</p>
-            <p>6999 kr</p>
+            <p>6999:-</p>
           </div>
         </div>
       </search>
@@ -108,8 +133,8 @@
   <body>
     <section id="product-link">
       <a href="../index.html">Home</a> /
-      <a href="products-boards.html">Boards</a> /
-      <a href="products-boards.html">Surf</a>
+      <a href="./products-boards.html">Boards</a> /
+      <a href="./products-boards.html">Surf</a>
     </section>
     <main>
       <section id="pictures">
@@ -121,7 +146,7 @@
       <section id="details">
         <section>
           <h1>Pyzel Ghost Surfboard Futures - White</h1>
-          <p>6999 kr:-</p>
+          <p>6999:-</p>
         </section>
         <section>
           <p id="description">
@@ -185,7 +210,7 @@
                 in 3-5 business days. If you live in another country it will
                 take up to 3 weeks to ship. <br />
                 <strong>Price?</strong> Shipping is free when purchasing above
-                5000kr. Other wise it costs 50-300kr depending on size and
+                5000kr. Other wise it costs 50-300:- depending on size and
                 weight of the package.
               </p>
             </div>
@@ -293,21 +318,21 @@
       <section>
         <div class="gridSection">
           <h4>Help & Information</h4>
-          <a href="#">Help</a>
-          <a href="#">Track your Order</a>
-          <a href="#">Orders & Returns</a>
-          <a href="#">Contact us</a>
+          <a href="./under-construction.html">Help</a>
+          <a href="./under-construction.html">Track your Order</a>
+          <a href="./under-construction.html">Orders & Returns</a>
+          <a href="./under-construction.html">Contact us</a>
         </div>
         <div class="gridSection">
           <h4>About</h4>
-          <a href="#">About us</a>
-          <a href="#">Career at SurfZen</a>
-          <a href="#">Invest in us</a>
+          <a href="./under-construction.html">About us</a>
+          <a href="./under-construction.html">Career at SurfZen</a>
+          <a href="./under-construction.html">Invest in us</a>
         </div>
         <div class="gridSection">
           <h4>More</h4>
-          <a href="#">Terms of Service</a>
-          <a href="#">Cookies</a>
+          <a href="./under-construction.html">Terms of Service</a>
+          <a href="./under-construction.html">Cookies</a>
         </div>
       </section>
       <h6>© SurfZen 2023. All rights reserved</h6>

@@ -71,7 +71,7 @@ header {
   top: 0;
   width: 100%;
   z-index: 100;
-  transition: all 0.15s ease-in-out;
+  
   border-bottom: 1px solid transparent;
 }
 
@@ -131,7 +131,7 @@ header.active {
   left: 50%;
 }
 
-#nav ul a:hover::after {
+#nav ul a.hovereffect:hover::after {
   width: 100%;
   left: 0;
 }
@@ -325,7 +325,7 @@ li:has(#cart-button:focus) #dropdown-cart,
   margin: 1rem;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1290px){
   #search {
     display: block;
   }
@@ -389,6 +389,14 @@ li:has(#cart-button:focus) #dropdown-cart,
     font-size: 1rem;
     font-weight: 500;
   }
+  #nav search input {
+    display: none;
+  }
+
+}
+
+@media screen and (max-width: 768px) {
+  
 
   #nav {
     padding: 1rem 2rem;
@@ -415,10 +423,6 @@ li:has(#cart-button:focus) #dropdown-cart,
 
   #nav ul:last-child {
     gap: 0.5rem;
-  }
-
-  #nav search input {
-    display: none;
   }
 
   li:has(#cart-button:focus) #dropdown-cart,
@@ -453,6 +457,10 @@ footer {
 footer h6 {
   color: var(--whiteColor);
   text-decoration: none;
+}
+footer h6,
+.gridSection h4 {
+  font-weight: 600;
 }
 footer section {
   margin: auto;

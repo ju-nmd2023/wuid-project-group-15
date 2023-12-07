@@ -37,9 +37,9 @@ function changePage(command) {
   } 
   /*If specific page is pressed*/
   else {
-    animation();
     currentpage = command - 1;
     pageLoader();
+    animation();
   }
 }
 

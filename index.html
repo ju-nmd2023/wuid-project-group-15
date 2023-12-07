@@ -8,16 +8,11 @@
     <link rel="stylesheet" href="css/index.css" />
     <script src="./js/main.js" defer></script>
     <script src="./js/index.js" defer></script>
-    <link
-      href="https://api.fontshare.com/v2/css?f[]=synonym@1&f[]=chillax@1&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://api.fontshare.com/v2/css?f[]=synonym@1&f[]=chillax@1&display=swap" rel="stylesheet" />
   </head>
   <header>
     <nav id="nav">
-      <a href="./index.html"
-        ><img src="./images/logo.png" alt="" id="mobile-logo"
-      /></a>
+      <a href="./index.html"><img src="./images/logo.png" alt="" id="mobile-logo" /></a>
       <ul onclick="toggleMenu()">
         <img src="./images/menu.svg" alt="" />
       </ul>
@@ -25,15 +20,15 @@
         <li>
           <a href="./index.html"><img src="./images/logo.png" alt="" /></a>
         </li>
-        <li><a href="./html/products-boards.html">Boards</a></li>
-        <li><a href="./html/products-wetsuits.html">Wetsuits</a></li>
-        <li><a href="./html/products.html">Clothing</a></li>
-        <li><a href="./html/products.html">Accessories</a></li>
+        <li><a class="hovereffect" href="./html/products-boards.html">Boards</a></li>
+        <li><a class="hovereffect" href="./html/products-wetsuits.html">Wetsuits</a></li>
+        <li><a class="hovereffect" href="./html/products.html">Clothing</a></li>
+        <li><a class="hovereffect" href="./html/products.html">Accessories</a></li>
       </ul>
       <ul>
         <li>
           <search id="desktop-search">
-            <input type="search" />
+            <input placeholder="Search" type="search" />
           </search>
           <button href="">
             <img src="./images/search.svg" alt="" onclick="toggleSearch()" />
@@ -65,7 +60,7 @@
               </div>
             </div>
             <hr />
-            <p>Total: <strong>1499kr:-</strong></p>
+            <p>Total: <strong>1499:-</strong></p>
             <a href="./checkout.html" class="button">Checkout</a>
           </button>
         </li>
@@ -87,7 +82,7 @@
         <img src="./images/x.svg" alt="X" />
       </div>
       <search>
-        <input type="search" />
+        <input placeholder="Search" type="search" />
         <div>
           <img src="./images/boards/surfBoard12.jpg" alt="" />
           <div>
@@ -99,36 +94,50 @@
           <img src="./images/boards/surfBoard11.jpg" alt="" />
           <div>
             <p>Pyzel Ghost Surfboard Futures - White</p>
-            <p>6999 kr:-</p>
+            <p>6999:-</p>
           </div>
         </div>
       </search>
     </section>
   </header>
   <body>
-    <picture>
-      <source
-        media="(max-width: 800px)"
-        srcset="images/home/mobileBackground.png"
-      />
-      <img id="backgroundImage" src="./images/home/background.png" />
-    </picture>
-    <img id="surferImage" src="./images/home/paralaxSurfer.png" alt="" />
     <main>
-      <h1>Every wave is a new adventure</h1>
-      <p>
-        With top of the line gear from SurfZen, your only worry should be
-        finding the right wave. Browse excellent apparel, boards and
-        accessories, all in one place!
-      </p>
-      <section id="buttonContainer">
-        <a id="boardButton" href="./html/products-boards.html"
-          ><span>Browse Boards</span></a
-        >
-        <a id="clothingButton" href="./html/products-wetsuits.html"
-          ><span>Browse Wetsuits</span></a
-        >
+      <section id="textContainer">
+        <h1>Every wave is a new adventure</h1>
+        <p>
+          With top of the line gear from SurfZen, your only worry should be finding the right wave. Browse excellent apparel, boards and accessories,
+          all in one place!
+        </p>
+        <section id="buttonContainer">
+          <a id="boardButton" href="./html/products-boards.html"><span>Browse Boards</span></a>
+          <a id="clothingButton" href="./html/products-wetsuits.html"><span>Browse Wetsuits</span></a>
+        </section>
       </section>
+      <img id="backgroundImage" src="./images/home/mobileBackground.png" alt="Background image for phone" />
+      <img id="surferImage" src="./images/home/paralaxSurfer.png" alt="Moving Surfboard" />
     </main>
+    <footer>
+      <section>
+        <div class="gridSection">
+          <h4>Help & Information</h4>
+          <a href="./under-construction.html">Help</a>
+          <a href="./under-construction.html">Track your Order</a>
+          <a href="./under-construction.html">Orders & Returns</a>
+          <a href="./under-construction.html">Contact us</a>
+        </div>
+        <div class="gridSection">
+          <h4>About</h4>
+          <a href="./under-construction.html">About us</a>
+          <a href="./under-construction.html">Career at SurfZen</a>
+          <a href="./under-construction.html">Invest in us</a>
+        </div>
+        <div class="gridSection">
+          <h4>More</h4>
+          <a href="./under-construction.html">Terms of Service</a>
+          <a href="./under-construction.html">Cookies</a>
+        </div>
+      </section>
+      <h6>© SurfZen 2023. All rights reserved</h6>
+    </footer>
   </body>
 </html>
