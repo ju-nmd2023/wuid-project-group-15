@@ -201,7 +201,7 @@ body > hr {
   margin: auto;
 }
 
-aside div section {
+aside > div section {
   display: flex;
   flex-wrap: nowrap;
   overflow-x: scroll;
@@ -209,7 +209,7 @@ aside div section {
   gap: 1rem;
 }
 
-aside div {
+aside > div {
   position: relative;
 }
 
@@ -222,7 +222,7 @@ aside section a p {
   font-size: 1.1rem;
 }
 
-aside div::after {
+aside > div::after {
   position: absolute;
   content: "";
   top: 0;
@@ -252,9 +252,27 @@ aside div section::-webkit-scrollbar-thumb {
   border-radius: 2px;
 }
 
-aside section img {
+aside section div {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+}
+
+aside section div img {
+  position: relative;
   border-radius: 2rem;
   border: 2px solid var(--blueColor);
+  grid-area: 1 / 1 / 2 / 2;
+  object-fit: cover;
+  object-position: center;
+}
+
+aside section div img:nth-child(2) {
+  z-index: -1;
+}
+
+aside section a:hover img:first-child {
+  display: none;
 }
 
 aside h4 {
