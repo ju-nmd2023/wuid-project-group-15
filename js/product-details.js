@@ -38,6 +38,7 @@ let arrow = document.getElementById("arrow");
 
 cartButton = document.getElementById("add-to-cart");
 //-play arrow animation on the add to cart click-//
+//-Code from https://stackoverflow.com/questions/45575265/repeat-animation-by-clicking-button-//
 cartButton.addEventListener("click", function () {
   if(!arrow.classList.contains('arrow_animation')){
     arrow.classList.add('arrow_animation');
