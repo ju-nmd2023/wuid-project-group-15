@@ -1,0 +1,14 @@
+#message{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height:100vh;
+}
+
+body{
+    background-image: url(../images/under-construction-background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}

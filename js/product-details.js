@@ -41,11 +41,13 @@ cartButton = document.getElementById("add-to-cart");
 cartButton.addEventListener("click", function () {
   if(!arrow.classList.contains('arrow_animation')){
     arrow.classList.add('arrow_animation');
-  }else{
+  }
+  else{
     arrow.classList.remove('arrow_animation')
     setTimeout(function(){
       arrow.classList.add('arrow_animation');
-  }, 500);
+  }, 0);
+
   }
 
 
