@@ -5,13 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Product Details</title>
     <link rel="stylesheet" href="../css/main.css" />
-    <link rel="stylesheet" href="../css/product-details.css" />
+    <link rel="stylesheet" type="text/css" href="../css/products.css"/> 
+    <link rel="stylesheet" href="../css/product-details.css"/>
+    
+    
     <script src="../js/main.js" defer></script>
     <script src="../js/product-details.js" defer></script>
     <link
-      href="https://api.fontshare.com/v2/css?f[]=synonym@1&f[]=chillax@1&display=swap"
-      rel="stylesheet"
-    />
+      href="https://api.fontshare.com/v2/css?f[]=synonym@1&f[]=chillax@1&display=swap" rel="stylesheet"/>
   </head>
   <header>
     <nav id="nav">
@@ -25,15 +26,15 @@
         <li>
           <a href="../index.html"><img src="../images/logo.png" alt="" /></a>
         </li>
-        <li><a href="../html/products-boards.html">Boards</a></li>
-        <li><a href="../html/products-wetsuits.html">Wetsuits</a></li>
-        <li><a href="../html/products.html">Clothing</a></li>
-        <li><a href="../html/products.html">Accessories</a></li>
+        <li><a class="hovereffect" href="./products-boards.html">Boards</a></li>
+        <li><a class="hovereffect" href="./products-wetsuits.html">Wetsuits</a></li>
+        <li><a class="hovereffect" href="./products-wetsuits.html">Clothing</a></li>
+        <li><a class="hovereffect" href="./products-boards.html">Accessories</a></li>
       </ul>
       <ul>
         <li>
           <search id="desktop-search">
-            <input type="search" />
+            <input placeholder="Search" type="search" />
           </search>
           <button href="">
             <img src="../images/search.svg" alt="" onclick="toggleSearch()" />
@@ -44,6 +45,8 @@
         </li>
         <li>
           <button id="cart-button">
+            <svg id="arrow" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="var(--blueColor)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-down"><path d="M12 5v14"/><path d="m19 12-7 7-7-7"/></svg>
+           
             <img src="../images/cart.svg" alt="" />
           </button>
           <button id="dropdown-cart">
@@ -76,10 +79,10 @@
         <img src="../images/x.svg" alt="X" />
       </div>
       <ul>
-        <li><a href="../html/products-boards.html">Boards</a></li>
-        <li><a href="../html/products-wetsuits.html">Wetsuits</a></li>
-        <li><a href="../html/products.html">Clothing</a></li>
-        <li><a href="../html/products.html">Accessories</a></li>
+        <li><a href="./products-boards.html">Boards</a></li>
+        <li><a href="./products-wetsuits.html">Wetsuits</a></li>
+        <li><a href="./products.html">Clothing</a></li>
+        <li><a href="./products.html">Accessories</a></li>
       </ul>
     </nav>
     <section id="search">
@@ -87,25 +90,26 @@
         <img src="../images/x.svg" alt="X" />
       </div>
       <search>
-        <input type="search" />
+        <input placeholder="Search" type="search" />
         <div>
           <img src="../images/boards/surfBoard12.jpg" alt="" />
           <div>
             <p>Pyzel Ghost Surfboard Futures - White</p>
-            <p>6999 kr</p>
+            <p>6999:-</p>
           </div>
         </div>
         <div>
           <img src="../images/boards/surfBoard11.jpg" alt="" />
           <div>
             <p>Pyzel Ghost Surfboard Futures - White</p>
-            <p>6999 kr</p>
+            <p>6999:-</p>
           </div>
         </div>
       </search>
     </section>
   </header>
   <body>
+   
     <section id="product-link">
       <a href="../index.html">Home</a> /
       <a href="products-boards.html">Boards</a> /
@@ -121,7 +125,7 @@
       <section id="details">
         <section>
           <h1>Pyzel Ghost Surfboard Futures - White</h1>
-          <p>6999 kr:-</p>
+          <p>6999:-</p>
         </section>
         <section>
           <p id="description">
@@ -185,7 +189,7 @@
                 in 3-5 business days. If you live in another country it will
                 take up to 3 weeks to ship. <br />
                 <strong>Price?</strong> Shipping is free when purchasing above
-                5000kr. Other wise it costs 50-300kr depending on size and
+                5000kr. Other wise it costs 50-300:- depending on size and
                 weight of the package.
               </p>
             </div>
@@ -198,46 +202,14 @@
       <h4>More like this</h4>
       <div>
         <section>
-          <a href="">
-            <img src="../images/boards/surfBoard2.jpg" alt="" />
-            <p>Pyzel Ghost Surfboard Futures - White</p>
-            <p>6999 kr:-</p>
-          </a>
-          <a href="">
-            <img src="../images/boards/surfBoard3.jpg" alt="" />
-            <p>Pyzel Ghost Surfboard Futures - White</p>
-            <p>6999 kr:-</p>
-          </a>
-          <a href="">
-            <img src="../images/boards/surfBoard4.jpg" alt="" />
-            <p>Pyzel Ghost Surfboard Futures - White</p>
-            <p>6999 kr:-</p>
-          </a>
-          <a href="">
-            <img src="../images/boards/surfBoard5.jpg" alt="" />
-            <p>Pyzel Ghost Surfboard Futures - White</p>
-            <p>6999 kr:-</p>
-          </a>
-          <a href="">
-            <img src="../images/boards/surfBoard6.jpg" alt="" />
-            <p>Pyzel Ghost Surfboard Futures - White</p>
-            <p>6999 kr:-</p>
-          </a>
-          <a href="">
-            <img src="../images/boards/surfBoard7.jpg" alt="" />
-            <p>Pyzel Ghost Surfboard Futures - White</p>
-            <p>6999 kr:-</p>
-          </a>
-          <a href="">
-            <img src="../images/boards/surfBoard8.jpg" alt="" />
-            <p>Pyzel Ghost Surfboard Futures - White</p>
-            <p>6999 kr:-</p>
-          </a>
-          <a href="">
-            <img src="../images/boards/surfBoard9.jpg" alt="" />
-            <p>Pyzel Ghost Surfboard Futures - White</p>
-            <p>6999 kr:-</p>
-          </a>
+          <a href="product-details.html" class="product_box"><img src="../images/boards/surfBoard2.jpg" alt="surfboard"/><h2><b>Pyzel</b><br>Ghost Surfboard Futures - White</h2><p>6999:-</p></a>
+          <a href="product-details.html" class="product_box"><img src="../images/boards/surfBoard7.jpg" alt="surfboard"><h2><b>Lib Tech X Lost </b><br> Puddle Jumper HP Surfboard 5ft 10 - White</h2><p>8399:-</p></a>
+          <a href="product-details.html" class="product_box"><img src="../images/boards/surfBoard8.jpg" alt="surfboard"><h2><b>Firewire</b><br> Repreve Volcaninc Seaside Surfboard 5ft 7 Futures - Grey</h2><p>7499:-</p></a>
+          <a href="product-details.html" class="product_box"><img src="../images/boards/surfBoard9.jpg" alt="surfboard"><h2><b>Lost</b><br> Surfboard Puddle Jumper 6ft 2 FCS II - White</h2><p>7899:-</p></a>
+          <a href="product-details.html" class="product_box"><img src="../images/boards/surfBoard10.jpg" alt="surfboard"><h2><b>Firewire</b><br> Ibolic AWT Revo Surfboard 5ft 8 FCS II - White</h2><p>8999:-</p></a>
+          <a href="product-details.html" class="product_box"><img src="../images/boards/surfBoard11.jpg" alt="surfboard"><h2><b>Slater Designs</b><br> Ibolic FRK + Surfboard 5ft 9 Futures - White</h2><p>8299:-</p></a>
+          <a href="product-details.html" class="product_box"><img src="../images/boards/surfBoard16.jpg" alt="surfboard"><h2><b>RYD</b><br>Fresh Wide Soft Surfboard 9ft 0 - Deep Blue</h2><p>6499:-</p></a>
+          <a href="product-details.html" class="product_box"><img src="../images/boards/surfBoard17.jpg" alt="surfboard"><h2><b>Lib Tech </b><br>Whirlpool surfboard 5ft 4 - White</h2><p>5599:-</p></a>
         </section>
       </div>
     </aside>

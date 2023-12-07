@@ -1,6 +1,8 @@
 //-----------------Scroll change nav bg and border-----------------//
 let nav = document.querySelector("header");
 
+
+
 window.addEventListener("scroll", () => {
   let y = window.scrollY;
   if (y > 1) {
@@ -24,3 +26,7 @@ function toggleSearch() {
   search.classList.toggle("active");
   desktopSearch.classList.toggle("active");
 }
+
+
+
+
