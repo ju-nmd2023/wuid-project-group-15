@@ -8,16 +8,11 @@
     <link rel="stylesheet" href="css/index.css" />
     <script src="./js/main.js" defer></script>
     <script src="./js/index.js" defer></script>
-    <link
-      href="https://api.fontshare.com/v2/css?f[]=synonym@1&f[]=chillax@1&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://api.fontshare.com/v2/css?f[]=synonym@1&f[]=chillax@1&display=swap" rel="stylesheet" />
   </head>
   <header>
     <nav id="nav">
-      <a href="./index.html"
-        ><img src="./images/logo.png" alt="" id="mobile-logo"
-      /></a>
+      <a href="./index.html"><img src="./images/logo.png" alt="" id="mobile-logo" /></a>
       <ul onclick="toggleMenu()">
         <img src="./images/menu.svg" alt="" />
       </ul>
@@ -106,29 +101,43 @@
     </section>
   </header>
   <body>
-    <picture>
-      <source
-        media="(max-width: 800px)"
-        srcset="images/home/mobileBackground.png"
-      />
-      <img id="backgroundImage" src="./images/home/background.png" />
-    </picture>
-    <img id="surferImage" src="./images/home/paralaxSurfer.png" alt="" />
     <main>
-      <h1>Every wave is a new adventure</h1>
-      <p>
-        With top of the line gear from SurfZen, your only worry should be
-        finding the right wave. Browse excellent apparel, boards and
-        accessories, all in one place!
-      </p>
-      <section id="buttonContainer">
-        <a id="boardButton" href="./html/products-boards.html"
-          ><span>Browse Boards</span></a
-        >
-        <a id="clothingButton" href="./html/products-wetsuits.html"
-          ><span>Browse Wetsuits</span></a
-        >
+      <section id="textContainer">
+        <h1>Every wave is a new adventure</h1>
+        <p>With top of the line gear from SurfZen, your only worry should be finding the right wave. Browse excellent apparel, boards and accessories, all in one place!</p>
+        <section id="buttonContainer">
+          <a id="boardButton" href="./html/products-boards.html"><span>Browse Boards</span></a>
+          <a id="clothingButton" href="./html/products-wetsuits.html"><span>Browse Wetsuits</span></a>
+        </section>
       </section>
+      <picture>
+        <source media="(max-width: 800px)" srcset="images/home/mobileBackground.png" />
+        <img id="backgroundImage" src="./images/home/background.png" />
+      </picture>
+      <img id="surferImage" src="./images/home/paralaxSurfer.png" alt="" />
     </main>
+    <footer>
+      <section>
+        <div class="gridSection">
+          <h4>Help & Information</h4>
+          <a href="#">Help</a>
+          <a href="#">Track your Order</a>
+          <a href="#">Orders & Returns</a>
+          <a href="#">Contact us</a>
+        </div>
+        <div class="gridSection">
+          <h4>About</h4>
+          <a href="#">About us</a>
+          <a href="#">Career at SurfZen</a>
+          <a href="#">Invest in us</a>
+        </div>
+        <div class="gridSection">
+          <h4>More</h4>
+          <a href="#">Terms of Service</a>
+          <a href="#">Cookies</a>
+        </div>
+      </section>
+      <h6>© SurfZen 2023. All rights reserved</h6>
+    </footer>
   </body>
 </html>

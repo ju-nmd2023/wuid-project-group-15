@@ -454,6 +454,10 @@ footer h6 {
   color: var(--whiteColor);
   text-decoration: none;
 }
+footer h6,
+.gridSection h4 {
+  font-weight: 600;
+}
 footer section {
   margin: auto;
   display: flex;
