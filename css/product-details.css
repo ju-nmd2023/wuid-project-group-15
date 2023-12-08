@@ -246,11 +246,7 @@ aside > div::after {
   left: 0;
   bottom: 4px;
   z-index: 10;
-  background-image: linear-gradient(
-    to right,
-    #f3decc00 80%,
-    var(--backgroundColor)
-  );
+  background-image: linear-gradient(to right, #f3decc00 80%, var(--backgroundColor));
   pointer-events: none;
 }
 
@@ -383,6 +379,7 @@ aside h4 {
 
   #pictures img {
     margin-bottom: 1rem;
+    width: 65vw;
   }
 
   #details {
