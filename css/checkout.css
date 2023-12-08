@@ -91,6 +91,9 @@ span {
 #country {
   grid-area: country;
 }
+#countryList {
+  background-color: var(--whiteColor);
+}
 #deliveryMethod {
   grid-area: deliveryMethod;
 }

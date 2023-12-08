@@ -101,7 +101,7 @@ main p {
 #buttonContainer a span {
   position: relative;
 }
-/*Inspired by https://codepen.io/jstn/pen/mdoOZJ*/
+/*Underline hover effect inspired by https://codepen.io/jstn/pen/mdoOZJ*/
 #boardButton span::before {
   content: "";
   position: absolute;
