@@ -52,7 +52,7 @@ h6 {
   mix-blend-mode: darken;
 }
 
-main:has(.button) {
+main {
   background-color: inherit;
 }
 
@@ -394,7 +394,11 @@ body:has(#mobile-nav.active) {
   }
 }
 
+<<<<<<< Updated upstream
 @media screen and (max-width: 930px) {
+=======
+@media screen and (max-width: 768px) {
+>>>>>>> Stashed changes
   #nav {
     padding: 1rem 2rem;
   }
@@ -422,7 +426,7 @@ body:has(#mobile-nav.active) {
     gap: 0.5rem;
   }
 
-  li:has(#cart-button:focus) #dropdown-cart,
+  #cart-button:focus + #dropdown-cart,
   #dropdown-cart:focus {
     right: 0;
   }
