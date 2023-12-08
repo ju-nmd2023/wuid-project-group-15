@@ -395,7 +395,7 @@ li:has(#cart-button:focus) #dropdown-cart,
 
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 930px) {
   
 
   #nav {
