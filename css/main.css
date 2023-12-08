@@ -394,11 +394,7 @@ body:has(#mobile-nav.active) {
   }
 }
 
-<<<<<<< Updated upstream
 @media screen and (max-width: 930px) {
-=======
-@media screen and (max-width: 768px) {
->>>>>>> Stashed changes
   #nav {
     padding: 1rem 2rem;
   }
