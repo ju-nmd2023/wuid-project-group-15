@@ -196,7 +196,7 @@ body:has(#mobile-nav.active) {
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 101;
+  z-index: 104;
   transition: all 0.4s ease;
 }
 
