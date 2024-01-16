@@ -55,6 +55,7 @@ main section:first-child {
   border: 2px solid var(--blueColor);
 }
 
+/*Sticks to the screen 100px from top until parent ends*/
 #details {
   background: var(--lightOverlayColor);
   max-width: 420px;
@@ -279,6 +280,7 @@ aside section div img {
   object-position: center;
 }
 
+/*Hover img stays beneath, it's always nth-child 2*/
 aside section div img:nth-child(2) {
   z-index: -1;
 }
@@ -312,6 +314,7 @@ aside h4 {
     opacity: 1;
     transform: translateY(10px);
   }
+
   100% {
     opacity: 0;
   }
@@ -371,6 +374,8 @@ aside h4 {
     border-radius: 2px;
   }
 
+  /*end and start decrement and increment is in reality the two arrows at the top and bottom of a scrollbar but is
+  this time used to make the scrollbar fit inside the window. The scrollbar is normally the same width as the parent.*/
   main #pictures::-webkit-scrollbar-button:end:decrement,
   main #pictures::-webkit-scrollbar-button:start:increment {
     background-color: var(--backgroundColor);

@@ -44,9 +44,11 @@ function changePage(command) {
 }
 
 function pageLoader() {
+
   /*Show the product page with the according number*/
   /*The currently active page is made visible*/
   /*c = the currently viewed page*/
+  
   let c = allpages[currentpage];
   c.style.display = "grid";
 

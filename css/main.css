@@ -92,6 +92,7 @@ header.active {
   transition: all 0.3s ease-in-out;
 }
 
+/*Remove hamburger menu*/
 #nav > a:first-child {
   display: none;
 }
@@ -172,6 +173,7 @@ header.active {
   cursor: pointer;
 }
 
+/*Cant scroll in background when mobile search is active, has doesn't work on all browsers.*/
 body:has(#mobile-nav.active) {
   overflow: hidden;
 }
@@ -244,6 +246,7 @@ body:has(#mobile-nav.active) {
   right: 2rem;
 }
 
+/*Dropdown cart is a button, firefox doesn´t allow focus tags on divs*/
 #dropdown-cart {
   position: fixed;
   right: -100%;
@@ -407,6 +410,7 @@ body:has(#mobile-nav.active) {
     display: flex;
   }
 
+  /*Logo aligned to the middle*/
   #nav > a:first-child {
     position: absolute;
     left: calc(50% - 44px);
